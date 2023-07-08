@@ -1,0 +1,72 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: simple utter
+  steps:
+  - intent: utter_intent
+  - action: utter_response
+
+- story: simple action use - 'hello_world'
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: simple google sheet action use
+  steps:
+  - intent: what_is_x
+  - action: simple_google_sheet_or_chatgpt_action
+
+- story: Customer Details
+  steps:
+    - intent: customer_details
+    - action: simple_google_sheet_or_chatgpt_action
+
+- story: Product Details
+  steps:
+    - intent: product_details
+    - action: simple_google_sheet_or_chatgpt_action
+
+- story: Employee Details
+  steps:
+    - intent: employee_details
+    - action: simple_google_sheet_or_chatgpt_action
+
+- story: Service Details
+  steps:
+    - intent: service_details
+    - action: simple_google_sheet_or_chatgpt_action
+
+
+rules:
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: action_gpt_default_fallback

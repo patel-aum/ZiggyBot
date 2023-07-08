@@ -1,0 +1,143 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: customer_details
+  examples: |
+    - Customer details for [C001](Customer_ID)
+    - Get customer information for [John](First_Name)
+    - Show details of customer [C003](Customer_ID)
+    - who has its first name as [John](First_Name)
+    - who has its second name as [Smith](Last_Name)
+    - who email is [john.smith@example.com](Email)
+    - who is [John](First_Name)
+- intent: product_details
+  examples: |
+    - give Product details for [P001](Product_ID)
+    - Get information about [P002](Product_ID)
+    - What are the details of [P003](Product_ID)?
+    - What is the price of [Laptop](Product_Name)?
+    - price of [Laptop](Product_Name)?
+    - What do you know about [Laptop](Product_Name)?
+
+- intent: employee_details
+  examples: |
+    - Get employee details for [John](First_name)
+    - Employee information for [John](First_name)
+    - Employee details for [John](First_name)
+    - Get details for employee [E001](Employee_Id)
+    - who is [John](First_Name)[Smith](Last Name)
+
+- intent: service_details
+  examples: |
+    - Get service details of [Web Design](Service_Name)
+    - Service information of [Web Design](Service_Name)
+    - Service details for [Web Design](Service_Name)
+    - Get details for service [S001](Service_id)
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: utter_intent
+  examples: |
+    - can you utter?
+    - do you know how to utter?
+    - show me an example of utter?
+    - how to utter?
+
+- intent: what_is_x
+  examples: |
+    - what is a [dog](object_entity)?
+    - what is a [chair](object_entity)?
+    - what a [dog](object_entity) is?
+    - what a [chair](object_entity) is
+
+
+
+

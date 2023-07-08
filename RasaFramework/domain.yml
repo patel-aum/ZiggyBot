@@ -1,0 +1,77 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - utter_intent
+  - what_is_x
+  - customer_details
+  - product_details
+  - employee_details
+  - Employee_Name
+  - Service_Details
+  - Employee_Id
+
+entities:
+  - object_entity
+  - Customer_ID
+  - First_Name
+  - Last_Name
+  - Email
+  - Product_ID
+  - Product_Name
+  - employee
+  - employee_id
+  - Service_Name
+  - Service_id
+  - EFirst_Name
+  - Employee_Id
+
+actions:
+- utter_response
+- simple_google_sheet_or_chatgpt_action
+- action_gpt_default_fallback
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_unknown:
+    - text: "I'm sorry, but I couldn't understand your request."
+
+  utter_customer_not_found:
+  - text: "Customer not found."
+
+  utter_product_not_found:
+  - text: "Product not found."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+templates:
+  utter_response:
+    - text: "No response."
+
