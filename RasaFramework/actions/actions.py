@@ -1,4 +1,3 @@
-import io
 import os
 import openai
 import random
@@ -16,7 +15,7 @@ class SimpleGoogleSheetOrChatGPTAction(Action):
     
     def name(self) -> Text:
         return "simple_google_sheet_or_chatgpt_action"
-
+    
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
