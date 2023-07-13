@@ -19,8 +19,10 @@ pip install ruamel.yaml
 pip install python-dotenv
 
  5) Go to RasaFramework directory
- 6) Run Command "pip install rasa[full] "
- 6) Run Command "  rasa install "
+ 6) Run Command "pip install rasa[full] " OR  Run Command "  rasa install "
  6) Run Command "  rasa init "
  7) Run Command " rasa run --enable-api --cors "*"  " in one shell to activate RASA api hook server
  8) Run Command " rasa run actions " in other shell to activate action server
+
+Our Youtube Tutorials link:
+https://www.youtube.com/playlist?list=PLv5TuIj35e2Cj4vhdLRWbsjtUf27KUete
